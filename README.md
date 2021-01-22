@@ -3,8 +3,8 @@
 A simple animated circular reveal based on stack widget. Works with single widget or list of widgets as children.
 
 <div class="display:inline-block">
-        <img src="1.gif" class="display:inline-block" height="650"/>
-        <img src="2.gif" class="display:inline-block" height="650"/>
+        <img src="https://github.com/Emadeddin-eibo/animated_reveal_stack/raw/master/1.gif" class="display:inline-block" height="650"/>
+        <img src="https://github.com/Emadeddin-eibo/animated_reveal_stack/raw/master/2.gif" class="display:inline-block" height="650"/>
 </div>
 
 
