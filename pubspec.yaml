@@ -1,8 +1,8 @@
 name: animated_reveal_stack
-description: A very simple animated reveal based on stack widget.
+description: A simple animated circular reveal based on stack widget. Works with single widget or list of widgets as children.
 version: 0.0.1
-author:
-homepage:
+author: Emadeddin.eibo
+homepage: https://github.com/Emadeddin-eibo/animated_reveal_stack
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
