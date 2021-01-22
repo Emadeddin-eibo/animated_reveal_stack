@@ -2,9 +2,10 @@
 
 A simple animated circular reveal based on stack widget. Works with single widget or list of widgets as children.
 
-<img src="1.gif" width="250" height="250"/>
-<img src="2.gif" width="250" height="250"/>
-
+<div class="display:inline-block">
+        <img src="1.gif" class="display:inline-block" height="650"/>
+        <img src="2.gif" class="display:inline-block" height="650"/>
+</div>
 ## Getting Started
 Easy to use, just wrap whatever you need to display inside the AnimatedRevealStack.
 
