@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/animated_reveal_stack.iml" filepath="$PROJECT_DIR$/animated_reveal_stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/animated_reveal_stack_android.iml" filepath="$PROJECT_DIR$/android/animated_reveal_stack_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/animated_reveal_stack_example_android.iml" filepath="$PROJECT_DIR$/example/android/animated_reveal_stack_example_android.iml" />
+    </modules>
+  </component>
+</project>

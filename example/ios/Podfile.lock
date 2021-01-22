@@ -1,0 +1,22 @@
+PODS:
+  - animated_reveal_stack (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - animated_reveal_stack (from `.symlinks/plugins/animated_reveal_stack/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  animated_reveal_stack:
+    :path: ".symlinks/plugins/animated_reveal_stack/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  animated_reveal_stack: 1ce1a51a2c3fd6204e88a3fbeeec0c2552401f99
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.0
