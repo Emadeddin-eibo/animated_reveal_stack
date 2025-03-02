@@ -1,11 +1,11 @@
 name: animated_reveal_stack_example
 description: Demonstrates how to use the animated_reveal_stack plugin.
-
+version: 1.0.0+2
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ^3.5.0
 
 dependencies:
   flutter:
@@ -21,7 +21,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:

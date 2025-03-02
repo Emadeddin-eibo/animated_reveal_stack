@@ -1,10 +1,10 @@
 import 'dart:ui' show lerpDouble;
 import 'package:flutter/material.dart';
 
-/// Use [offset] to decide your starting point,
-/// as for [child], you can Column or any other widgets.
-/// just keep in mind that [AnimatedRevealStack] is based on
-/// [Stack] widget, and nothing should overlap with the [AnimatedBuilder]
+/// Use [offset] to decide your starting point.
+/// As for [child], you can use a [Column] or any other widgets.
+/// Just keep in mind that [AnimatedRevealStack] is based on
+/// a [Stack] widget, and nothing should overlap with the [AnimatedBuilder].
 class AnimatedRevealStack extends StatelessWidget {
   final Offset offset;
   final Animation<double> animation;
@@ -12,13 +12,12 @@ class AnimatedRevealStack extends StatelessWidget {
   final Widget child;
 
   const AnimatedRevealStack({
-    Key key,
-    @required this.offset,
-    this.animation,
-    this.color,
-    this.child,
-  })  : assert(offset != null),
-        super(key: key);
+    super.key, // Updated to use null safety
+    required this.offset,
+    required this.animation,
+    required this.color,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +53,10 @@ class _AnimationClipper extends CustomClipper<Path> {
   final double topPadding;
 
   const _AnimationClipper({
-    @required this.fraction,
-    this.offset,
-    this.height,
-    this.radius,
+    required this.fraction,
+    required this.offset,
+    required this.height,
+    this.radius = 0,
     this.topPadding = 50,
   });
 
@@ -67,11 +66,12 @@ class _AnimationClipper extends CustomClipper<Path> {
       ..addOval(
         Rect.fromCircle(
           center: offset,
-          radius: lerpDouble(0, height + topPadding, fraction),
+          radius: lerpDouble(0, height + topPadding, fraction) ?? 0,
         ),
       );
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => true;
+  bool shouldReclip(covariant _AnimationClipper oldClipper) =>
+      fraction != oldClipper.fraction;
 }

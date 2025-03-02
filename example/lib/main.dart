@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:animated_reveal_stack/animated_reveal_stack.dart';
 
+import 'page_2.dart';
+
 void main() {
   runApp(ExampleApp());
 }
@@ -10,6 +12,8 @@ class ExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
+      // Change this to Page2 to see the other example.
+      // home: Page2(),
     );
   }
 }
@@ -20,8 +24,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
-  AnimationController _animationController;
-  CurvedAnimation _animation;
+  late AnimationController _animationController;
+  late CurvedAnimation _animation;
   bool toggle = false;
 
   @override
@@ -51,7 +55,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         color: Colors.teal,
         animation: _animation,
         child: Center(
-          child: RaisedButton(
+          child: MaterialButton(
             onPressed: () {
               toggle
                   ? _animationController.reverse()

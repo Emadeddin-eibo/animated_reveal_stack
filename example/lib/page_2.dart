@@ -7,8 +7,8 @@ class Page2 extends StatefulWidget {
 }
 
 class _Page2State extends State<Page2> with TickerProviderStateMixin {
-  AnimationController _animationController;
-  CurvedAnimation _animation;
+  late AnimationController _animationController;
+  late CurvedAnimation _animation;
   bool toggle = false;
 
   @override
@@ -32,53 +32,53 @@ class _Page2State extends State<Page2> with TickerProviderStateMixin {
         color: Colors.teal,
         offset: Offset(
           MediaQuery.of(context).size.width / 2,
-          MediaQuery.of(context).size.height,
+          MediaQuery.of(context).size.height / 2,
         ),
         animation: _animation,
         child: toggle
             ? Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(height: 150),
-            Text(
-              'Hello there!',
-              style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.black45,
-                  fontWeight: FontWeight.w500),
-            ),
-            Text(
-              'You can place whatever you need here, cool right?',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(height: 250),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: RaisedButton(
-                onPressed: () {
-                  _animationController.reverse();
-                  setState(() => toggle = !toggle);
-                },
-                child: Text('Whatever, go back'),
-              ),
-            ),
-          ],
-        )
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 150),
+                  Text(
+                    'Hello there!',
+                    style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.black45,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    'You can place whatever you need here, cool right?',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Spacer(),
+                  Center(
+                    child: MaterialButton(
+                      onPressed: () {
+                        _animationController.reverse();
+                        setState(() => toggle = !toggle);
+                      },
+                      child: Text('Whatever, go back'),
+                    ),
+                  ),
+                  const SizedBox(height: 100),
+                ],
+              )
             : Align(
-          alignment: Alignment.bottomCenter,
-          child: RaisedButton(
-            onPressed: () {
-              _animationController.forward();
-              setState(() => toggle = !toggle);
-            },
-            child: Text('Reveal'),
-          ),
-        ),
+                alignment: Alignment.center,
+                child: MaterialButton(
+                  onPressed: () {
+                    _animationController.forward();
+                    setState(() => toggle = !toggle);
+                  },
+                  child: Text('Reveal'),
+                ),
+              ),
       ),
     );
   }

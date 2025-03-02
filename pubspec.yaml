@@ -1,11 +1,10 @@
 name: animated_reveal_stack
 description: A simple animated circular reveal based on stack widget. Works with single widget or list of widgets as children.
-version: 0.0.1+2
+version: 0.1.0
 homepage: https://github.com/Emadeddin-eibo/animated_reveal_stack
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.20.0 <2.0.0"
+  sdk: ^3.5.0
 
 dependencies:
   flutter:
@@ -24,14 +23,6 @@ flutter:
   # The 'pluginClass' and Android 'package' identifiers should not ordinarily
   # be modified. They are used by the tooling to maintain consistency when
   # adding or updating assets for this project.
-  plugin:
-    platforms:
-      android:
-        package: com.eibo.emadeddin.animated_reveal_stack
-        pluginClass: AnimatedRevealStackPlugin
-      ios:
-        pluginClass: AnimatedRevealStackPlugin
-
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
